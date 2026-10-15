@@ -21,7 +21,7 @@ Monday 12 October 2026
 
 ## Tasks
 
-### Task 1: `Account` Class (Abstract)
+### Task 1: Account Class (Abstract)
     - Abstract class `Account` with protected fields `accountNumber` and `balance`.
     - Constructor to initialise both fields.
     - Concrete `deposit(double amount)` method that rejects non-positive amounts.
@@ -31,7 +31,7 @@ Monday 12 October 2026
 
 
 
-### Task 2: `SavingsAccount` Class
+### Task 2: SavingsAccount Class
     - Extends `Account`.
     - Has a fixed `minimumBalance` and an `interestRate`.
     - Overrides `withdraw()` to reject any withdrawal that would take the balance below the minimum,
@@ -40,7 +40,7 @@ Monday 12 October 2026
 
 
 
-### Task 3: `CurrentAccount` Class
+### Task 3: CurrentAccount Class
     - Extends `Account`.
     - Has an `overdraftLimit` and a fixed `monthlyFee`.
     - Overrides `withdraw()` to allow the balance to go negative, but not past the overdraft limit.
@@ -48,7 +48,7 @@ Monday 12 October 2026
 
 
 
-### Task 4: Polymorphic Demo in `BankDemo`
+### Task 4: Polymorphic Demo in BankDemo
     - Creates a `List<Account>` containing a mix of `SavingsAccount` and `CurrentAccount` objects.
     - Loops through the list calling `withdraw()` and `endOfMonth()` through the `Account` reference only.
     - Does not cast to the subclass anywhere in the loop.
@@ -98,11 +98,11 @@ Monday 12 October 2026
 
 
 ## OOP Concepts Demonstrated
-    - **Abstraction** — `Account` defines the shared shape but leaves `withdraw()` and `endOfMonth()` to subclasses.
-    - **Inheritance** — `SavingsAccount` and `CurrentAccount` both extend `Account`.
-    - **Polymorphism** — one `List<Account>` holds both types; the correct overridden method runs at runtime.
-    - **Method Overriding** — each subclass provides its own `withdraw()` and `endOfMonth()`.
-    - **Encapsulation** — fields are `protected` so subclasses can use them while still being hidden from other classes.
+    - Abstraction — `Account` defines the shared shape but leaves `withdraw()` and `endOfMonth()` to subclasses.
+    - Inheritance — `SavingsAccount` and `CurrentAccount` both extend `Account`.
+    - Polymorphism — one `List<Account>` holds both types; the correct overridden method runs at runtime.
+    - Method Overriding — each subclass provides its own `withdraw()` and `endOfMonth()`.
+    - Encapsulation* — fields are `protected` so subclasses can use them while still being hidden from other classes.
 
 
 
